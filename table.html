@@ -1,0 +1,240 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js"></script>
+
+    <title>Hello, world!</title>
+    <link rel="stylesheet" href="all.css">
+</head>
+
+<body>
+    <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+        <a class="navbar-brand" href="#">商務控制後台</a>
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent"
+            aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+
+        <div class="collapse navbar-collapse" id="navbarSupportedContent">
+            <div class="navbar-var  d-flex ">
+                <a class="nav-item nav-link" href="index.html">首頁 <span class="sr-only">(current)</span></a>
+                <a class="nav-item nav-link active" href="dashboard_table.html">列表</a>
+            </div>
+        </div>
+    </nav>
+    <div class="container-fluid mt-3 main">
+        <div class="row mb-2">
+            <div class="con-md-3">
+                <div class="input-group">
+                    <input type="text" class="form-control form-control-sm" placeholder="Recipient's username" aria-label="Recipient's username" aria-describedby="basic-addon2" data-toggle="tooltip" data-placement="top" title="按一下快速搜寻">
+                    <div class="input-group-append">
+                        <button class="btn btn-outline-secondary" type="button">Button</button>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-9 text-right my-2 my-lg-0">
+                <button type="button" class="btn btn-success" data-toggle="modal" data-target="#editModal" data-title="快速下单">
+                <i class="fas fa-shopping-cart mr-2"></i>快速下单</button>
+            </div>
+        </div>
+    </div>
+
+    <!-- table-hover可现实显著的横条 -->
+    <table class="table tabke-responsive table-hover">
+        <thead>
+            <tr>
+                <th width="10">#</th>
+                <th width="120">品项</th>
+                <th width="120">客户名称</th>
+                <th width="200">Email</th>
+                <th width="120">状态</th>
+                <th class="text-right" width="120">金额</th>
+                <th class="text-center" width="150">操作</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr class="table-danger">
+                <td scope="row">1</td>
+                <td class="text-primary">PS5</td>
+                <td class="text-center">Mark<span class="badge badge-pill badge-danger">奥克</span></td>
+                <td class="text-center">Otto@gmail.com</td>
+                <td class="text-center">已出货</td>
+                <td class="text-right">$1,988</td>
+                <td class="text-center">
+                    <!-- btn-group-sm调整按钮大小-->
+                    <div class="btn-group btn-group-sm" role="group" aria-label="Basic example">
+                        <button type="button" class="btn btn-secondary btn-outline-secondary" data-toggle="modal" data-target="#editModal"data-title="编辑 PS5" data-backdrop="static">编辑</button>
+                        <button type="button" class="btn btn-secondary btn-outline-secondary">查看</button>
+
+                        <button type="button" class="btn btn-danger dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                            其他
+                        </button>
+                        <div class="dropdown-menu">
+                            <a class="dropdown-item" href="#">操作记录</a>
+                            <a class="dropdown-item" href="#">资料汇出</a>
+                            <div class="dropdown-divider"></div>
+                            <a class="dropdown-item text-danger" href="#" data-toggle="modal" data-target="#removeModal" data-title="PS5">删除订单</a>
+                        </div>
+                    </div>
+                </td>
+            </tr>
+            <tr>
+                <td scope="row">2</td>
+                <td class="text-primary">Switch</td>
+                <td class="text-center">小白<span class="badge badge-pill badge-danger">老客户</span></td>
+                <td class="text-center">123@gmail.com</td>
+                <td class="text-center">已出货</td>
+                <td class="text-right">$1,878</td>
+                <td class="text-center">
+                    <div class="btn-group" role="group" aria-label="Basic example">
+                        <button type="button" class="btn btn-secondary btn-outline-secondary" data-toggle="modal" data-target="#editModal" data-title="编辑Switch" data-backdrop="static">编辑</button>
+                        <button type="button" class="btn btn-secondary btn-outline-secondary">查看</button>
+
+                        <button type="button" class="btn btn-danger dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                            其他
+                        </button>
+                        <div class="dropdown-menu">
+                            <a class="dropdown-item" href="#">操作记录</a>
+                            <a class="dropdown-item" href="#">资料汇出</a>
+                            <div class="dropdown-divider"></div>
+                            <a class="dropdown-item text-danger" href="#" data-toggle="modal" data-target="#removeModal" data-title="Switch">删除订单</a>
+                        </div>
+                    </div>
+                </td>
+            </tr>
+            <tr class="table-success">
+                <th scope="row">3</th>
+                <td class="text-primary">笔记本电脑</td>
+                <td class="text-center">小白<span class="badge badge-pill badge-success">老客户</span></td>
+                <td class="text-center">123@gmail.com</td>
+                <td class="text-center">已出货</td>
+                <td class="text-right">$1,878</td>
+                <td class="text-center">
+                    <div class="btn-group" role="group" aria-label="Basic example">
+                        <button type="button" class="btn btn-secondary btn-outline-secondary" data-toggle="modal" data-target="#editModal" data-title="编辑" data-backdrop="static">编辑</button>
+                        <button type="button" class="btn btn-secondary btn-outline-secondary">查看</button>
+
+                        <button type="button" class="btn btn-danger dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                            其他
+                        </button>
+                        <div class="dropdown-menu">
+                            <a class="dropdown-item" href="#">操作记录</a>
+                            <a class="dropdown-item" href="#">资料汇出</a>
+                            <div class="dropdown-divider"></div>
+                            <a class="dropdown-item text-danger" href="#" data-toggle="modal" data-target="#removeModal" data-title="笔记本电脑">删除订单</a>
+                        </div>
+                    </div>
+                </td>
+            </tr>
+            <tr>
+                <th scope="row" colspan="7">
+
+                </th>
+            </tr>
+            <tr>
+                <th scope="row" colspan="7">...</th>
+            </tr>
+            <tr>
+                <th scope="row" colspan="7">
+                    <div class="progress">
+                        <div class="progress-bar progress-bar-striped" role="progressbar" aria-valuenow="75" aria-valuemin="0" aria-valuemax="100" style="width: 75%"></div>
+                    </div>
+                </th>
+            </tr>
+        </tbody>
+    </table>
+    
+    <nav aria-label="Page navigation example">
+        <ul class="pagination justify-content-center">
+            <li class="page-item"><a class="page-link" href="#">Previous</a></li>
+            <li class="page-item"><a class="page-link" href="#">1</a></li>
+            <li class="page-item"><a class="page-link" href="#">2</a></li>
+            <li class="page-item"><a class="page-link" href="#">3</a></li>
+            <li class="page-item"><a class="page-link" href="#">Next</a></li>
+        </ul>
+    </nav>
+    <footer class="mt-5 py-3 bg-light text-secondary text-center">
+        后台管理系统
+    </footer>
+    
+    <div class="modal fade" id="editModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+        <div class="modal-dialog" role="document">
+          <div class="modal-content">
+            <div class="modal-header">
+              <h5 class="modal-title" id="exampleModalLabel">Modal title</h5>
+              <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                <span aria-hidden="true">&times;</span>
+              </button>
+            </div>
+            <div class="modal-body">
+              ...
+            </div>
+            <div class="modal-footer">
+              <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+              <button type="button" class="btn btn-primary">Save changes</button>
+            </div>
+          </div>
+        </div>
+      </div>
+    
+      <div class="modal fade" id="removeModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+        <div class="modal-dialog" role="document">
+          <div class="modal-content">
+              <!-- bg-danger text-white将删除按钮文字改变颜色 -->
+            <div class="modal-header bg-danger text-white">
+              <h5 class="modal-title" id="exampleModalLabel">Modal title</h5>
+              <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                <span aria-hidden="true">&times;</span>
+              </button>
+            </div>
+            <div class="modal-body">
+              ...
+            </div>
+            <div class="modal-footer">
+              <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+              <button type="button" class="btn btn-primary">Save changes</button>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js"
+            integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN"
+            crossorigin="anonymous"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.11.0/ulg/popper.min.js"
+            integrity="sha384-b/U6ypiBEHpOf/4+1nzFpr53nxSS+GLCkfwBdFNTxtclqqenISfwAzpKaMNFNmj4"
+            crossorigin="anonymous"></script>
+        <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta/js/bootstrap.min.js"
+            integrity="sha384-h0AbiXch4ZDo7tp9hKZ4TsHbi047NrKGLO3SEJAg45jXxnGIfYzk4Si90RDIqNm1"
+            crossorigin="anonymous"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.7.0/Chart.bundle.min.js"></script>
+    
+      <script>
+          $(document).ready(function(){
+              $('[data-toggle="tooltip"]').tooltip();
+              //编辑的modal事件
+              $('#editModal').on('show.bs.modal', function ( event ){
+                  var button=$(event.relatedTarget) //选择当初触发事件
+                  var title=button.data('title') //使用data- 来取得特定内容
+                  var modal=$(this)
+                  modal.find('.modal-title').text(title) // 写入资料
+              });
+              $('#removeModal').on('show.bs.modal', function ( event ){
+                  var button=$(event.relatedTarget)
+                  var title=button.data('title')
+                  var modal=$(this)
+                  modal.find('.modal-title').text('确认删除' + title)
+              })
+          });
+      </script>
+      </body>
+      </html>
